@@ -5,7 +5,7 @@ title: "A reproducible framework for measuring the compressibility of truncated 
 version: 1.0.0
 license: MIT
 date-released: "2026-06-16"
-repository-code: "https://github.com/pa1aash/spherical-harmonics-earth-fields"
+repository-code: "https://github.com/pa1aash/spherical-harmonics-earth-fields-data-release"
 abstract: >
   This repository provides a fully reproducible Python pipeline for measuring
   the relative L²(S²) reconstruction error of truncated spherical-harmonic
