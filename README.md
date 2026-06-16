@@ -112,7 +112,7 @@ The complete pinned conda environment is in `environment.yml`; pip-only users ca
 
 If you use this code or data in your work, please cite the paper:
 
-> Gang, P. (2026). A reproducible framework for measuring the compressibility of truncated spherical-harmonic models of planetary potential fields. *Preprint.* [DOI/URL to be filled after posting]
+> Gang, P. (2026). A reproducible framework for measuring the compressibility of truncated spherical-harmonic models of planetary potential fields. 10.5281/zenodo.20716351
 
 A machine-readable citation is available in `CITATION.cff`.
 
