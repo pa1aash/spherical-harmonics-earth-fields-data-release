@@ -1,0 +1,7 @@
+field,label,threshold,L_at_threshold,n_coeffs,eps_degree,eps_best_n_term,gap_pp
+gravity,Gravity (EGM2008 geoid),0.05,38,1521,0.049522,0.041465,0.8058
+gravity,Gravity (EGM2008 geoid),0.01,192,37249,0.009929,0.006793,0.3137
+magnetic,Magnetic (IGRF-13 $B_r$),0.05,4,25,0.033168,0.021014,1.2154
+magnetic,Magnetic (IGRF-13 $B_r$),0.01,6,49,0.009404,0.005127,0.4277
+lithospheric,Magnetic crustal (NGDC-720 $B_r$),0.05,133,17956,0.0,0.0,0.0
+lithospheric,Magnetic crustal (NGDC-720 $B_r$),0.01,133,17956,0.0,0.0,0.0

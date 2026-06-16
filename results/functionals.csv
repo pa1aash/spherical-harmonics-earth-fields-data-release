@@ -1,0 +1,5 @@
+functional,label,decay_slope,spectrum_alpha,l_at_1pct,coeffs_at_1pct,lref,method
+geoid,Geoid undulation N,-0.897883,2.958935,194.95,38416,360,raw_stokes_disturbing_potential_parseval
+disturbance,Gravity disturbance dg,-0.252682,0.982406,357.03,128881,360,raw_stokes_disturbing_potential_parseval
+anomaly,Free-air gravity anomaly Dg,-0.241117,0.934019,357.47,128881,360,raw_stokes_disturbing_potential_parseval
+Trr,Radial-radial gradient T_rr,-0.07605,-0.97183,358.96,129600,360,raw_stokes_disturbing_potential_parseval

@@ -1,0 +1,57 @@
+Spherical-harmonic spectral truncation of Earth's fields
+Seed 1A: gravity (EGM2008) vs magnetic (IGRF-13)
+================================================================
+Random seed: 20240606 (provenance only; the analysis is fully deterministic -- no resampling)
+Software: python=3.13.13, numpy=2.4.6, scipy=1.17.1, matplotlib=3.10.9, pandas=3.0.3, pyshtools=4.14.1, boule=v0.6.0, cartopy=0.25.0
+
+Primary outcome: relative L2(S2) reconstruction error
+  eps(l_max) = ||f - S_{l_max} f|| / ||f||  (area-weighted, GLQ)
+
+----------------------------------------------------------------
+FIELD: Gravity (EGM2008 geoid)   [analysed scalar field: N, m]
+  provenance: EGM2008 (Pavlis et al. 2012), tide-free, via pyshtools.datasets.Earth.EGM2008 -> ICGEM. Derived field: geoid undulation N relative to the WGS84 normal ellipsoid (boule.WGS84), first-order Bruns; degrees 0 and 1 removed; reference degree l_ref=360.
+  reference degree l_ref = 360
+  decay exponent p_hat = -0.861 +/- 0.033   (PRIMARY: directly-measured eps-curve log-log slope over l in [4,300],
+      R^2 = 0.969; uncertainty = delete-one-degree jackknife SE)
+      spectral index alpha = +2.839 +/- 0.027 (weighted fit, reduced chi^2 = 1.51, R^2 = 0.975);
+      asymptotic (1-alpha)/2 = -0.919 +/- 0.013 -- matches p_hat for alpha>1 (gravity); EFFECTIVE index for the
+      13-degree magnetic field; NOT applicable to the near-white crustal spectrum (alpha < 1).
+  eps <   10%: l_max =   12.1  (exact crossing),  196 coeffs, 0.132% of reference
+  eps <    5%: l_max =   37.5  (exact crossing),  1521 coeffs, 1.139% of reference
+  eps <    1%: l_max =  191.2  (exact crossing),  37249 coeffs, 28.331% of reference
+  VERIFICATION: Parseval PASS (max rel err 1.01e-15); monotonic True; quadrature area err 1.07e-14
+----------------------------------------------------------------
+FIELD: Magnetic (IGRF-13 $B_r$)   [analysed scalar field: B_r, nT]
+  provenance: IGRF-13 (Alken et al. 2021) epoch 2020.0, via pyshtools.datasets.Earth.IGRF_13 -> NOAA NCEI. Derived field: radial component B_r at Earth's surface (r0 = 6371.2 km); all degrees 1..13 retained.
+  reference degree l_ref = 13
+  decay exponent p_hat = -2.924 +/- 0.724   (PRIMARY: directly-measured eps-curve log-log slope over l in [1,12],
+      R^2 = 0.908; uncertainty = delete-one-degree jackknife SE)
+      spectral index alpha = +7.509 +/- 0.647 (weighted fit, reduced chi^2 = 1.74, R^2 = 0.931);
+      asymptotic (1-alpha)/2 = -3.254 +/- 0.323 -- matches p_hat for alpha>1 (gravity); EFFECTIVE index for the
+      13-degree magnetic field; NOT applicable to the near-white crustal spectrum (alpha < 1).
+  eps <   10%: l_max =    2.5  (exact crossing),  16 coeffs, 6.260% of reference
+  eps <    5%: l_max =    3.4  (exact crossing),  25 coeffs, 10.026% of reference
+  eps <    1%: l_max =    5.9  (exact crossing),  49 coeffs, 24.012% of reference
+  VERIFICATION: Parseval PASS (max rel err 9.76e-16); monotonic True; quadrature area err 8.88e-15
+----------------------------------------------------------------
+FIELD: Magnetic crustal (NGDC-720 $B_r$)   [analysed scalar field: B_r, nT]
+  provenance: NGDC-720 V3 (Maus 2010) lithospheric model, via pyshtools.datasets.Earth.NGDC_720_V3 -> NOAA NCEI. Derived field: crustal B_r at Earth's surface; degrees 16..133 (degrees <16 are zero by construction). SECONDARY/optional curve.
+  reference degree l_ref = 133
+  decay exponent p_hat = -0.248 +/- 0.037   (PRIMARY: directly-measured eps-curve log-log slope over l in [16,110],
+      R^2 = 0.809; uncertainty = delete-one-degree jackknife SE)
+      spectral index alpha = -0.455 +/- 0.042 (weighted fit, reduced chi^2 = 0.35, R^2 = 0.554);
+      asymptotic (1-alpha)/2 = +0.728 +/- 0.021 -- matches p_hat for alpha>1 (gravity); EFFECTIVE index for the
+      13-degree magnetic field; NOT applicable to the near-white crustal spectrum (alpha < 1).
+  eps <   10%: l_max =  129.5  (exact crossing),  17161 coeffs, 94.792% of reference
+  eps <    5%: l_max =  131.2  (exact crossing),  17689 coeffs, 97.361% of reference
+  eps <    1%: l_max =  132.6  (exact crossing),  17956 coeffs, 99.467% of reference
+  VERIFICATION: Parseval PASS (max rel err 0.00e+00); monotonic True; quadrature area err 1.78e-14
+----------------------------------------------------------------
+NOTES (see AUDIT_REPORT.md):
+  * Fair comparison: each field's eps is measured against ITS OWN reference degree (gravity 360, magnetic main field 13). The
+    decay exponent (log-log slope) is the scale-free comparator. The IGRF main field decays fastest because it is a deep-core,
+    dipole-dominated signal that is intrinsically band-limited to l<=13; the geoid is intermediate; the CRUSTAL magnetic field
+    decays SLOWER than gravity. So 'magnetic compresses better' is true ONLY for the core/main field, not magnetism in general.
+  * Gravity threshold sensitivity: the geoid's low-degree power (esp. degree 2) depends on the reference-ellipsoid/tide-system
+    treatment; dropping degree 2 raises the 1%% threshold from ~191 to ~219. The decay exponent and the qualitative gap are
+    robust to this choice. Magnetic results are verified against the raw Gauss coefficients to ~1e-13 (no such sensitivity).

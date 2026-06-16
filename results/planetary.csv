@@ -1,0 +1,4 @@
+body,label,accessor,ellipsoid,lref,decay_slope,slope_jackknife_se,spectrum_alpha,l_at_1pct,coeffs_at_1pct,parseval_pass,monotonic
+earth,Gravity (EGM2008 geoid),Earth.EGM2008,boule.WGS84,360,-0.86072,0.033363,2.838844,191.15,37249,True,True
+moon,Lunar geoid (GRGM1200B),Moon.GRGM1200B,boule.Moon2015,360,-0.961339,0.047026,3.300177,201.67,41209,True,True
+mars,Areoid (Mars GMM3),Mars.GMM3,boule.Mars2009,90,-1.128746,0.084529,3.447847,59.84,3721,True,True

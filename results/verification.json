@@ -1,0 +1,8 @@
+{
+  "_description": "Independent verification cross-checks recomputed from raw spherical-harmonic coefficients by audit.py. Estimators: R=raw-coefficient Parseval, G=GLQ field, S=equiangular grid with explicit sin(theta) weights.",
+  "magnetic_Br_spectrum_raw_vs_pysh_max_rel_diff": 3.386891454670399e-13,
+  "gravity_glq_vs_sintheta_grid_max_abs_eps": 4.2287081780667535e-07,
+  "gravity_unweighted_minus_weighted_max_abs_eps": 0.07376115309194364,
+  "gravity_eps_at_l100": 0.023642512235670193,
+  "seed": 20240606
+}

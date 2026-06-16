@@ -1,0 +1,30 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# macOS
+.DS_Store
+._*
+
+# pyshtools download logs (models are cached in ~/.cache/pyshtools/)
+data/*.log
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.out
+*.toc
+*.synctex.gz
+*.log
+
+# Generated cache (reproducible from make_figures.py --save-cache)
+results/cache.pkl
+
+# pytest
+.pytest_cache/

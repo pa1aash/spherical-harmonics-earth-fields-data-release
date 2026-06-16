@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+type: software
+title: "A reproducible framework for measuring the compressibility of truncated spherical-harmonic models of planetary potential fields"
+version: 1.0.0
+license: MIT
+date-released: "2026-06-16"
+repository-code: "https://github.com/pa1aash/spherical-harmonics-earth-fields"
+abstract: >
+  This repository provides a fully reproducible Python pipeline for measuring
+  the relative L²(S²) reconstruction error of truncated spherical-harmonic
+  models of planetary potential fields (gravity and magnetic). The framework
+  covers Earth (EGM2008 geoid, IGRF-13 main field, NGDC-720 crustal field),
+  the Moon (GRGM1200B), and Mars (GMM3), and includes rate-distortion,
+  codec bit-efficiency, temporal, and functional analyses.
+keywords:
+  - spherical harmonics
+  - spectral truncation
+  - geoid
+  - geomagnetic field
+  - data compression
+  - reproducibility
+  - planetary geophysics
+authors:
+  - family-names: Gang
+    given-names: Palaash
+    orcid: "https://orcid.org/0009-0006-7448-9488"
+preferred-citation:
+  type: article
+  title: "A reproducible framework for measuring the compressibility of truncated spherical-harmonic models of planetary potential fields"
+  authors:
+    - family-names: Gang
+      given-names: Palaash
+      orcid: "https://orcid.org/0009-0006-7448-9488"
+  year: 2026
+  url: "https://doi.org/PLACEHOLDER"

@@ -1,0 +1,128 @@
+{
+  "gravity": [
+    {
+      "eps": 0.1,
+      "mu": 0.016103810683017798,
+      "B_WF_bits": 509.4769121597376,
+      "bits_per_coeff": 0.003909519956411962,
+      "l_trunc": 12.1372132049356,
+      "n_coeffs_trunc": 196,
+      "B_float32_bits": 6272,
+      "float32_over_floor_ratio": 12.310665803112043
+    },
+    {
+      "eps": 0.05,
+      "mu": 0.0004227014823821322,
+      "B_WF_bits": 3765.0244486033407,
+      "bits_per_coeff": 0.028891276261756645,
+      "l_trunc": 37.38932736935745,
+      "n_coeffs_trunc": 1521,
+      "B_float32_bits": 48672,
+      "float32_over_floor_ratio": 12.927406093751976
+    },
+    {
+      "eps": 0.025,
+      "mu": 2.515360567278796e-05,
+      "B_WF_bits": 22566.932610050466,
+      "bits_per_coeff": 0.17316952208883313,
+      "l_trunc": 94.29232411832498,
+      "n_coeffs_trunc": 9216,
+      "B_float32_bits": 294912,
+      "float32_over_floor_ratio": 13.068324574543961
+    },
+    {
+      "eps": 0.01,
+      "mu": 1.3409764925754918e-06,
+      "B_WF_bits": 105828.59425696736,
+      "bits_per_coeff": 0.8120858695102509,
+      "l_trunc": 191.25310972126505,
+      "n_coeffs_trunc": 37249,
+      "B_float32_bits": 1191968,
+      "float32_over_floor_ratio": 11.263194114680639
+    }
+  ],
+  "magnetic": [
+    {
+      "eps": 0.1,
+      "mu": 468202.2725154964,
+      "B_WF_bits": 36.49124093740892,
+      "bits_per_coeff": 0.18713456890978933,
+      "l_trunc": 2.502725711883445,
+      "n_coeffs_trunc": 16,
+      "B_float32_bits": 512,
+      "float32_over_floor_ratio": 14.03076428335777
+    },
+    {
+      "eps": 0.05,
+      "mu": 81926.49994295508,
+      "B_WF_bits": 68.24947506641924,
+      "bits_per_coeff": 0.3499973080329192,
+      "l_trunc": 3.432863312983323,
+      "n_coeffs_trunc": 25,
+      "B_float32_bits": 800,
+      "float32_over_floor_ratio": 11.721701877141964
+    },
+    {
+      "eps": 0.025,
+      "mu": 14288.044887073342,
+      "B_WF_bits": 112.3411041780204,
+      "bits_per_coeff": 0.5761082265539508,
+      "l_trunc": 4.3347680660652905,
+      "n_coeffs_trunc": 36,
+      "B_float32_bits": 1152,
+      "float32_over_floor_ratio": 10.254483507430127
+    },
+    {
+      "eps": 0.01,
+      "mu": 1608.0811821321308,
+      "B_WF_bits": 201.38565182976123,
+      "bits_per_coeff": 1.032746932460314,
+      "l_trunc": 5.860222899684083,
+      "n_coeffs_trunc": 49,
+      "B_float32_bits": 1568,
+      "float32_over_floor_ratio": 7.786056185003133
+    }
+  ],
+  "crustal": [
+    {
+      "eps": 0.1,
+      "mu": 0.0009795228349089365,
+      "B_WF_bits": 58159.72574138939,
+      "bits_per_coeff": 3.2858602113779316,
+      "l_trunc": 131.94513421009182,
+      "n_coeffs_trunc": 17689,
+      "B_float32_bits": 566048,
+      "float32_over_floor_ratio": 9.732645620045828
+    },
+    {
+      "eps": 0.05,
+      "mu": 0.0002448807087272341,
+      "B_WF_bits": 75859.72574138935,
+      "bits_per_coeff": 4.28586021137793,
+      "l_trunc": 132.4895683728756,
+      "n_coeffs_trunc": 17956,
+      "B_float32_bits": 574592,
+      "float32_over_floor_ratio": 7.574401230487187
+    },
+    {
+      "eps": 0.025,
+      "mu": 6.122017718180853e-05,
+      "B_WF_bits": 93559.72574138935,
+      "bits_per_coeff": 5.28586021137793,
+      "l_trunc": 132.7445388465848,
+      "n_coeffs_trunc": 17956,
+      "B_float32_bits": 574592,
+      "float32_over_floor_ratio": 6.141445963493345
+    },
+    {
+      "eps": 0.01,
+      "mu": 9.79522834914185e-06,
+      "B_WF_bits": 116957.85302082726,
+      "bits_per_coeff": 6.607788306261427,
+      "l_trunc": 132.89775659667518,
+      "n_coeffs_trunc": 17956,
+      "B_float32_bits": 574592,
+      "float32_over_floor_ratio": 4.912812480387098
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "seed": 20240606,
+  "method": "deterministic; PRIMARY decay exponent = directly-measured eps-curve log-log slope with a delete-one-degree jackknife SE. Companion: weighted-least-squares spectral index alpha (sigma_l^2 ~ l^-alpha, weights (2l+1)/2), with p=(1-alpha)/2 reported as the asymptotic prediction (valid alpha>1; effective index for the band-limited magnetic field; inapplicable to the near-white crustal field). No bootstrap.",
+  "versions": {
+    "python": "3.13.13",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "matplotlib": "3.10.9",
+    "pandas": "3.0.3",
+    "pyshtools": "4.14.1",
+    "boule": "v0.6.0",
+    "cartopy": "0.25.0"
+  },
+  "fields": {
+    "gravity": {
+      "label": "Gravity (EGM2008 geoid)",
+      "units": "m",
+      "l_ref": 360,
+      "decay_exponent": -0.8607195833420692,
+      "decay_exponent_jackknife_se": 0.03336339274970788,
+      "decay_exponent_r2": 0.9687578792020355,
+      "intercept_log10": 0.005068265692693568,
+      "spectrum_alpha": 2.838844377409822,
+      "spectrum_alpha_se": 0.02660083717035582,
+      "spectrum_alpha_se_model": 0.021653342599465084,
+      "spectrum_reduced_chi2": 1.5091788658906442,
+      "spectrum_r2": 0.9747521922296303,
+      "spectrum_p_asymptotic": -0.919422188704911,
+      "spectrum_p_asymptotic_se": 0.01330041858517791,
+      "fit_range": [
+        4,
+        300
+      ],
+      "parseval_max_rel_error": 1.0103555527836556e-15,
+      "parseval_pass": true,
+      "monotonic": true,
+      "quadrature_area_error": 1.0658141036401503e-14,
+      "quadrature_parseval_rel_error": 3.066550540648325e-15,
+      "provenance": "EGM2008 (Pavlis et al. 2012), tide-free, via pyshtools.datasets.Earth.EGM2008 -> ICGEM. Derived field: geoid undulation N relative to the WGS84 normal ellipsoid (boule.WGS84), first-order Bruns; degrees 0 and 1 removed; reference degree l_ref=360."
+    },
+    "magnetic": {
+      "label": "Magnetic (IGRF-13 $B_r$)",
+      "units": "nT",
+      "l_ref": 13,
+      "decay_exponent": -2.923811427484836,
+      "decay_exponent_jackknife_se": 0.7236869389394477,
+      "decay_exponent_r2": 0.9077533966328963,
+      "intercept_log10": -0.03665775195320676,
+      "spectrum_alpha": 7.508708080358227,
+      "spectrum_alpha_se": 0.6466606610206901,
+      "spectrum_alpha_se_model": 0.48986126552272075,
+      "spectrum_reduced_chi2": 1.7426360074653389,
+      "spectrum_r2": 0.93095220297554,
+      "spectrum_p_asymptotic": -3.2543540401791136,
+      "spectrum_p_asymptotic_se": 0.32333033051034504,
+      "fit_range": [
+        1,
+        12
+      ],
+      "parseval_max_rel_error": 9.755982292103063e-16,
+      "parseval_pass": true,
+      "monotonic": true,
+      "quadrature_area_error": 8.881784197001252e-15,
+      "quadrature_parseval_rel_error": 1.4425836740293603e-15,
+      "provenance": "IGRF-13 (Alken et al. 2021) epoch 2020.0, via pyshtools.datasets.Earth.IGRF_13 -> NOAA NCEI. Derived field: radial component B_r at Earth's surface (r0 = 6371.2 km); all degrees 1..13 retained."
+    },
+    "lithospheric": {
+      "label": "Magnetic crustal (NGDC-720 $B_r$)",
+      "units": "nT",
+      "l_ref": 133,
+      "decay_exponent": -0.24761654145607292,
+      "decay_exponent_jackknife_se": 0.03707004353329423,
+      "decay_exponent_r2": 0.8088697490523908,
+      "intercept_log10": 0.3369405867959041,
+      "spectrum_alpha": -0.4550496451464335,
+      "spectrum_alpha_se": 0.04232612799765823,
+      "spectrum_alpha_se_model": 0.07145489657977443,
+      "spectrum_reduced_chi2": 0.3508755383052951,
+      "spectrum_r2": 0.5541380321485396,
+      "spectrum_p_asymptotic": 0.7275248225732167,
+      "spectrum_p_asymptotic_se": 0.021163063998829116,
+      "fit_range": [
+        16,
+        110
+      ],
+      "parseval_max_rel_error": 0.0,
+      "parseval_pass": true,
+      "monotonic": true,
+      "quadrature_area_error": 1.7763568394002505e-14,
+      "quadrature_parseval_rel_error": 3.3395847191183746e-15,
+      "provenance": "NGDC-720 V3 (Maus 2010) lithospheric model, via pyshtools.datasets.Earth.NGDC_720_V3 -> NOAA NCEI. Derived field: crustal B_r at Earth's surface; degrees 16..133 (degrees <16 are zero by construction). SECONDARY/optional curve."
+    }
+  }
+}

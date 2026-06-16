@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shtrunc"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "pyshtools==4.14.1",
+    "boule==0.6.0",
+    "numpy==2.4.6",
+    "scipy==1.17.1",
+    "matplotlib==3.10.9",
+    "pandas==3.0.3",
+    "pooch==1.9.0",
+    "PyWavelets==1.8.0",
+]
+
+[tool.setuptools]
+py-modules = [
+    "shtrunc",
+    "config",
+    "audit",
+    "figures",
+    "make_figures",
+    "bandlimit",
+    "codec",
+    "functionals",
+    "planetary",
+    "ratedist",
+    "radius",
+    "temporal",
+    "anisotropy",
+    "resolution",
+    "wavelet",
+    "phase2_framework_check",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
